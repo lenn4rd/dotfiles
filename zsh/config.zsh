@@ -1,15 +1,15 @@
-if [[ -n $SSH_CONNECTION ]]; then
-  export PS1='%m:%3~$(git_info_for_prompt)%# '
-else
-  export PS1='%3~$(git_info_for_prompt)%# '
-fi
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export PS1='%m:%3~$(git_info_for_prompt)%# '
+# else
+#   export PS1='%3~$(git_info_for_prompt)%# '
+# fi
 
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
 
-fpath=($ZSH/functions $fpath)
+# fpath=($DOTFILES/functions $fpath)
 
-autoload -U $ZSH/functions/*(:t)
+# autoload -U $DOTFILES/functions/*(:t)
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -46,3 +46,9 @@ bindkey '^[[5C' end-of-line
 bindkey '^[[3~' delete-char
 bindkey '^[^N' newtab
 bindkey '^?' backward-delete-char
+
+# Set to this to use case-sensitive completion
+CASE_SENSITIVE="true"
+
+# Uncomment following line if you want red dots to be displayed while waiting for completion
+COMPLETION_WAITING_DOTS="true"
