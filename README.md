@@ -1,8 +1,8 @@
-# holman does dotfiles
+# lenn4rd does dotfiles
 
 ## dotfiles
 
-Your dotfiles are how you personalize your system. These are mine.
+Your dotfiles are how you personalize your system. These are mine, forked from [@holman](https://github.com/holman/dotfiles)'s excellent repository. See the **forked** section below for some notes about my changes.
 
 I was a little tired of having long alias files and everything strewn about
 (which is extremely common on other dotfiles projects, too). That led to this
@@ -14,12 +14,16 @@ If you're interested in the philosophy behind why projects like these are
 awesome, you might want to [read my post on the
 subject](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
 
+## forked
+
+This is a fork of Zach Holman's dotfiles. I added a couple of topics, e.g. SSH and TextMate, removed options I don't need and, most importantly, I added [zgen](https://github.com/tarjoilija/zgen) to manage my `zsh`.
+
 ## install
 
 Run this:
 
 ```sh
-git clone https://github.com/holman/dotfiles.git ~/.dotfiles
+git clone https://github.com/lenn4rd/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
 ```
@@ -47,7 +51,7 @@ symlinked without extension into `$HOME` when you run `script/bootstrap`.
 
 A lot of stuff. Seriously, a lot of stuff. Check them out in the file browser
 above and see what components may mesh up with you.
-[Fork it](https://github.com/holman/dotfiles/fork), remove what you don't
+[Fork it](https://github.com/lenn4rd/dotfiles/fork), remove what you don't
 use, and build on what you do use.
 
 ## components
@@ -75,7 +79,7 @@ said, I do use this as *my* dotfiles, so there's a good chance I may break
 something if I forget to make a check for a dependency.
 
 If you're brand-new to the project and run into any blockers, please
-[open an issue](https://github.com/holman/dotfiles/issues) on this repository
+[open an issue](https://github.com/lenn4rd/dotfiles/issues) on this repository
 and I'd love to get it fixed for you!
 
 ## thanks
