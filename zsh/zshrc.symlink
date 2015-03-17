@@ -1,41 +1,77 @@
-# shortcut to this dotfiles path is $ZSH
-export ZSH=$HOME/.dotfiles
+# load zgen
+source "${HOME}/.zgen/zgen.zsh"
 
-# your project folder that we can `c [tab]` to
-export PROJECTS=~/Code
+# check if there's no init script
+if ! zgen saved; then
+  echo "Creating a zgen save"
 
-# Stash your environment variables in ~/.localrc. This means they'll stay out
-# of your main dotfiles repository (which may be public, like this one), but
-# you'll have access to them in your scripts.
-if [[ -a ~/.localrc ]]
-then
-  source ~/.localrc
+  # Load Oh my zsh
+  zgen oh-my-zsh
+
+  # Load plugins from Oh my zsh
+  zgen oh-my-zsh plugins/bundler
+  zgen oh-my-zsh plugins/brew
+  zgen oh-my-zsh plugins/brew-cask
+  # zgen oh-my-zsh plugins/cp
+  # zgen oh-my-zsh plugins/encode64
+  # zgen oh-my-zsh plugins/gem
+  # zgen oh-my-zsh plugins/git
+  # zgen oh-my-zsh plugins/git-flow
+  # zgen oh-my-zsh plugins/jsontools
+  # zgen oh-my-zsh plugins/knife
+  # zgen oh-my-zsh plugins/pow
+  # zgen oh-my-zsh plugins/powder
+  # zgen oh-my-zsh plugins/urltools
+  # zgen oh-my-zsh plugins/wakeonlan
+  
+  # Load plugins from GitHub repos
+  zgen load rupa/z
+
+  # Set theme
+  zgen load sindresorhus/pure
+  
+  # dotfiles
+  # 
+  export DOTFILES=$HOME/.dotfiles
+
+  # all of our zsh files
+  typeset -U config_files
+  config_files=($DOTFILES/**/*.zsh)
+
+  # load the path files
+  for file in ${(M)config_files:#*/path.zsh}; do
+    file=${file#${DOTFILES}/}
+
+    echo Including $file
+    zgen load lenn4rd/dotfiles $file
+    # zgen load $HOME/.dotfiles $file
+  done
+
+  # load everything but the path and completion files
+  for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}; do
+    file=${file#${DOTFILES}/}
+
+    echo Including $file
+    zgen load lenn4rd/dotfiles $file
+    # zgen load $HOME/.dotfiles $file
+  done
+ 
+  # initialize autocomplete here, otherwise functions won't be loaded
+  # autoload -U compinit
+  # compinit -d "${ZGEN_DIR}/zcompdump"
+
+  # load every completion after autocomplete loads
+  for file in ${(M)config_files:#*/completion.zsh}; do
+    file=${file#${DOTFILES}/}
+
+    echo Including $file
+    zgen load lenn4rd/dotfiles $file
+    # zgen load $HOME/.dotfiles $file
+  done
+ 
+ zgen load lenn4rd/dotfiles functions
+  # zgen load $HOME/.dotfiles functions
+
+  # save all to init script
+  zgen save
 fi
-
-# all of our zsh files
-typeset -U config_files
-config_files=($ZSH/**/*.zsh)
-
-# load the path files
-for file in ${(M)config_files:#*/path.zsh}
-do
-  source $file
-done
-
-# load everything but the path and completion files
-for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
-do
-  source $file
-done
-
-# initialize autocomplete here, otherwise functions won't be loaded
-autoload -U compinit
-compinit
-
-# load every completion after autocomplete loads
-for file in ${(M)config_files:#*/completion.zsh}
-do
-  source $file
-done
-
-unset config_files
