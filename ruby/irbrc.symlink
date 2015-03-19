@@ -35,6 +35,12 @@ def me
   User.find_by_login(ENV['USER'].strip)
 end
 
+# Returns the instance methods on klass that aren't already on Object
+# Source: http://www.justinweiss.com/blog/2014/06/17/fast-consistent-setup-for-your-ruby-and-rails-projects/
+def m(klass)
+  klass.public_instance_methods - Object.public_instance_methods
+end
+
 def r
   reload!
 end
