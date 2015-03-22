@@ -1,3 +1,5 @@
 --template=~/.dotfiles/rails/rails.template
 --database=mysql
+--no-helper
+--skip-assets
 --skip-test-unit
