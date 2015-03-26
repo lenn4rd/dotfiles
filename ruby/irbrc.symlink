@@ -1,7 +1,8 @@
 #!/usr/bin/ruby
+
+require 'irb'
 require 'irb/completion'
 require 'irb/ext/save-history'
-require 'rubygems'
 
 require 'awesome_print'
 AwesomePrint.irb!
