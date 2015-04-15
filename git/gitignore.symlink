@@ -18,6 +18,7 @@ Forwardfile
 config/application.yml
 
 .bundle
+.vagrant
 .Trashes
 doc/api
 doc/app
