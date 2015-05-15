@@ -1,0 +1,13 @@
+#!/bin/sh
+#
+# Usage: git-sync
+#
+# Fetches commits from upstream and merges them into the current local branch.
+#
+
+set -e
+
+BRANCH=`git rev-parse --abbrev-ref HEAD`
+
+git fetch upstream $BRANCH
+git merge --no-commit upstream/$BRANCH
