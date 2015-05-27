@@ -4,14 +4,10 @@ source "${HOME}/.zgen/zgen.zsh"
 # check if there's no init script
 if ! zgen saved; then
   echo "Creating a zgen save"
-
-  # Load Oh my zsh
-  zgen oh-my-zsh
-
+  
   # Load plugins from Oh my zsh
-  zgen oh-my-zsh plugins/bundler
-  zgen oh-my-zsh plugins/brew
-  zgen oh-my-zsh plugins/brew-cask
+  # zgen oh-my-zsh plugins/brew
+  # zgen oh-my-zsh plugins/brew-cask
   # zgen oh-my-zsh plugins/cp
   # zgen oh-my-zsh plugins/encode64
   # zgen oh-my-zsh plugins/gem
@@ -24,8 +20,12 @@ if ! zgen saved; then
   # zgen oh-my-zsh plugins/urltools
   # zgen oh-my-zsh plugins/wakeonlan
   
-  # Load plugins from GitHub repos
+  # Use plugins
   zgen load rupa/z
+  
+  # Use completions
+  zgen load rhysd/zsh-bundle-exec
+  zgen load zsh-users/zsh-completions src
 
   # Set theme
   zgen load sindresorhus/pure
