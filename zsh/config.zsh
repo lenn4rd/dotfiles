@@ -50,5 +50,5 @@ bindkey '^?' backward-delete-char
 # Set to this to use case-sensitive completion
 CASE_SENSITIVE="true"
 
-# Uncomment following line if you want red dots to be displayed while waiting for completion
+# Display red dots while waiting for completion
 COMPLETION_WAITING_DOTS="true"
