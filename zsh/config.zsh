@@ -44,6 +44,5 @@ bindkey '^[[3~' delete-char
 bindkey '^[^N' newtab
 bindkey '^?' backward-delete-char
 
-
 # Display red dots while waiting for completion
 COMPLETION_WAITING_DOTS="true"
