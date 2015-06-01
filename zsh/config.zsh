@@ -43,8 +43,6 @@ bindkey '^[[3~' delete-char
 bindkey '^[^N' newtab
 bindkey '^?' backward-delete-char
 
-# Set to this to use case-sensitive completion
-CASE_SENSITIVE="true"
 
 # Display red dots while waiting for completion
 COMPLETION_WAITING_DOTS="true"

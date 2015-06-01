@@ -1,5 +1,6 @@
-# matches case insensitive for lowercase
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+# Try to complete case-sensitive if object exists, fall back to case-insensitive
+# Source: http://stackoverflow.com/a/24237590
+zstyle ':completion:*' '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
 # pasting with tabs doesn't perform completion
 zstyle ':completion:*' insert-tab pending
