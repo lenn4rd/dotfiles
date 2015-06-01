@@ -27,8 +27,7 @@ if ! zgen saved; then
   zgen load mafredri/zsh-async
   zgen load sindresorhus/pure
   
-  # dotfiles
-  # 
+  # Use dotfiles
   export DOTFILES=$HOME/.dotfiles
 
   # all of our zsh files
@@ -52,10 +51,6 @@ if ! zgen saved; then
     zgen load lenn4rd/dotfiles $file
     # zgen load $HOME/.dotfiles $file
   done
- 
-  # initialize autocomplete here, otherwise functions won't be loaded
-  # autoload -U compinit
-  # compinit -d "${ZGEN_DIR}/zcompdump"
 
   # load every completion after autocomplete loads
   for file in ${(M)config_files:#*/completion.zsh}; do
