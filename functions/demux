@@ -1,0 +1,15 @@
+demux () {
+  case $1 in
+    'list')
+  		mplayer2 -endpos 0 -vo null -ao null "$2" 2> /dev/null | grep codec:
+      ;;
+      
+    'audio'|'video')
+  		mplayer2 "$2" "-dump$1" -dumpfile "$3" 2> /dev/null
+      ;;
+      
+    *)
+      echo "Usage: `basename $0` <video|audio|list> <input> [output]"
+      ;;
+  esac
+}
