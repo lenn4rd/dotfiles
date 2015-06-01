@@ -22,10 +22,6 @@ if ! zgen saved; then
   
   # Use plugins
   zgen load rupa/z
-  
-  # Use completions
-  zgen load rhysd/zsh-bundle-exec
-  zgen load zsh-users/zsh-completions src
 
   # Set theme
   zgen load sindresorhus/pure
@@ -71,6 +67,10 @@ if ! zgen saved; then
  
  zgen load lenn4rd/dotfiles functions
   # zgen load $HOME/.dotfiles functions
+  
+  # Use completions
+  zgen load rhysd/zsh-bundle-exec
+  zgen load zsh-users/zsh-completions src
 
   # save all to init script
   zgen save
