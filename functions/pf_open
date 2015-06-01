@@ -1,0 +1,5 @@
+# Open folder in Path Finder
+# Source: http://forrst.com/posts/command_line_open_in_path_finder-9b4
+function pf_open () {
+  open -a "Path Finder.app" "$1"
+}

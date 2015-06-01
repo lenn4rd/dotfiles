@@ -65,9 +65,6 @@ if ! zgen saved; then
     zgen load lenn4rd/dotfiles $file
     # zgen load $HOME/.dotfiles $file
   done
- 
- zgen load lenn4rd/dotfiles functions
-  # zgen load $HOME/.dotfiles functions
   
   # Use completions
   zgen load rhysd/zsh-bundle-exec

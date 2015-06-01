@@ -1,0 +1,4 @@
+# Extract bzip2-compressed tar using pbzip2
+function pbuntar() {
+  pbzip2 -dc "$1" | tar x
+}

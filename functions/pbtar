@@ -1,0 +1,4 @@
+# Create bzip2-compressed tar using pbzip2
+pbtar() {
+  tar cf "$1".tar.bz2 --use-compress-program=pbzip2 "$2"
+}

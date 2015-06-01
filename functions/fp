@@ -1,0 +1,5 @@
+# find and list processes matching a case-insensitive partial-match string
+# Source: http://brettterpstra.com/fk-a-useful-bash-function/
+fp () { 
+  ps Ao pid,comm|awk '{match($0,/[^\/]+$/); print substr($0,RSTART,RLENGTH)": "$1}'|grep -i $1|grep -v grep
+}
