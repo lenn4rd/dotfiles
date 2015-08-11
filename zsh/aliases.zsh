@@ -6,7 +6,5 @@ alias la='ls -lah'
 
 alias rld='. ~/.zshrc'
 
-alias mkcd=take
-
 alias dotfiles='mate ~/.dotfiles'
 alias zshrc='mate ~/.zshrc'
