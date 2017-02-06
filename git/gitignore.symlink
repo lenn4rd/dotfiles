@@ -5,6 +5,7 @@
 *.swp
 
 ._*
+.byebug_history
 .config
 .DS_Store
 .DS_Store?
@@ -12,6 +13,7 @@
 .env.local
 .foreman
 .powder
+.pronto.yml
 .ruby-version
 .Spotlight-V100
 Forwardfile
@@ -26,3 +28,7 @@ doc/api
 doc/app
 tmp/*
 vendor/bundle
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
