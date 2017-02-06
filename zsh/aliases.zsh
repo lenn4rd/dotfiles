@@ -8,3 +8,4 @@ alias rld='. ~/.zshrc'
 
 alias dotfiles='mate ~/.dotfiles'
 alias zshrc='mate ~/.zshrc'
+
