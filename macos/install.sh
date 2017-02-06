@@ -26,7 +26,6 @@ brew cask install \
 	google-chrome \
 	firefox \
 	flux \
-	hipchat \
 	macdown \
 	path-finder \
 	textexpander \
@@ -45,6 +44,7 @@ brew cask install \
 
 # Web development
 brew install \
+  openssl \
 	postgresql \
 	pow \
 	rabbitmq \
