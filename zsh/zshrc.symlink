@@ -6,12 +6,9 @@ if ! zgen saved; then
   echo "Creating a zgen save"
 
   # Use plugins
+  zgen load mafredri/zsh-async
   zgen load rupa/z
 
-  # Set theme and load helpers
-  zgen load mafredri/zsh-async
-  zgen load sindresorhus/pure
-  
   # Use dotfiles
   export DOTFILES=$HOME/.dotfiles
 
@@ -45,7 +42,7 @@ if ! zgen saved; then
     # zgen load lenn4rd/dotfiles $file
     zgen load $HOME/.dotfiles $file
   done
-  
+
   # Use completions
   zgen load rhysd/zsh-bundle-exec
   zgen load zsh-users/zsh-completions src
@@ -53,3 +50,6 @@ if ! zgen saved; then
   # save all to init script
   zgen save
 fi
+
+# Set theme
+zgen load sindresorhus/pure
