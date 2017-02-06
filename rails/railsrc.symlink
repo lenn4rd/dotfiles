@@ -1,5 +1,5 @@
 --template=~/.dotfiles/rails/rails.template
---database=mysql
+--database=postgresql
 --no-helper
 --no-helper-specs
 --skip-assets
