@@ -1,1 +1,1 @@
-alias sshconfig='mate ~/.ssh/config'
+alias sshconfig='mate ~/.ssh/config.d'
