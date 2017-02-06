@@ -4,22 +4,7 @@ source "${HOME}/.zgen/zgen.zsh"
 # check if there's no init script
 if ! zgen saved; then
   echo "Creating a zgen save"
-  
-  # Load plugins from Oh my zsh
-  # zgen oh-my-zsh plugins/brew
-  # zgen oh-my-zsh plugins/brew-cask
-  # zgen oh-my-zsh plugins/cp
-  # zgen oh-my-zsh plugins/encode64
-  # zgen oh-my-zsh plugins/gem
-  # zgen oh-my-zsh plugins/git
-  # zgen oh-my-zsh plugins/git-flow
-  # zgen oh-my-zsh plugins/jsontools
-  # zgen oh-my-zsh plugins/knife
-  # zgen oh-my-zsh plugins/pow
-  # zgen oh-my-zsh plugins/powder
-  # zgen oh-my-zsh plugins/urltools
-  # zgen oh-my-zsh plugins/wakeonlan
-  
+
   # Use plugins
   zgen load rupa/z
 
