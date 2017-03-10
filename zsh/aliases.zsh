@@ -1,6 +1,7 @@
 alias ..='cd ..'
 alias ...='cd ../..'
 
+alias ls='grc --colour=auto ls'
 alias ll='ls -lh'
 alias la='ls -lah'
 
