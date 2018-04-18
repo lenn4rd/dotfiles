@@ -20,8 +20,6 @@ if ! zgen saved; then
   for file in ${(M)config_files:#*/path.zsh}; do
     file=${file#${DOTFILES}/}
 
-    echo Including $file
-    # zgen load lenn4rd/dotfiles $file
     zgen load $HOME/.dotfiles $file
   done
 
@@ -29,8 +27,6 @@ if ! zgen saved; then
   for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}; do
     file=${file#${DOTFILES}/}
 
-    echo Including $file
-    # zgen load lenn4rd/dotfiles $file
     zgen load $HOME/.dotfiles $file
   done
 
@@ -39,7 +35,6 @@ if ! zgen saved; then
     file=${file#${DOTFILES}/}
 
     echo Including $file
-    # zgen load lenn4rd/dotfiles $file
     zgen load $HOME/.dotfiles $file
   done
 

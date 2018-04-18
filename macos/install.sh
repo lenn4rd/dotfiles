@@ -11,13 +11,12 @@ chsh -s /bin/zsh
 git clone https://github.com/tarjoilija/zgen.git ~/.zgen
 
 # Essentials
-brew install caskroom/cask/brew-cask
-brew install homebrew/completions/brew-cask-completion
+brew tap caskroom/cask
+brew install brew-cask-completion
 
 # Now: applications
 brew cask install \
 	1password \
-	dropbox \
 	iterm2
 
 # Productivity
@@ -46,6 +45,4 @@ brew cask install \
 brew install \
   openssl \
 	postgresql \
-	pow \
-	rabbitmq \
 	redis

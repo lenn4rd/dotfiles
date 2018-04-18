@@ -1,16 +1,3 @@
-# Play a Blu-Ray disc by streaming with DumpHD and piping into mplayer
-function bdplay () {
-  if [ ! -p /tmp/bd ]; then mkfifo /tmp/bd; fi
-  # open /tmp/bd -a MPlayer\ OSX\ Extended
-  
-  FILE=BDMV/STREAM/`ls -S $1/BDMV/STREAM/ | head -1`
-  
-  cd ~/Applications/DumpHD
-  ./dumphd.sh --infile:$FILE "$1" | /Applications/mplayer2.app/Contents/MacOS/mplayer2 -afm hwac3 -cache 16384 -lavdopts threads=8 -
-  #1> ~/Desktop/mpv.log
-  cd -
-}
-
 # Remove .DS_Store files recursively
 function de_DS_Store () {
   find . -name ".DS_Store" -exec rm \{\} \;
@@ -20,9 +7,9 @@ function demux () {
   if [ $# -le 1 ]; then
     echo "Usage: `basename $0` <video|audio|list> <input> [output]"
   else
-  
+
   	ACTION="-dump$1"
-	
+
   	if [ "$1" = "list" ]; then
   		mplayer2 -endpos 0 -vo null -ao null "$2" 2> /dev/null | grep codec:
   	else
@@ -33,12 +20,12 @@ function demux () {
 
 # find and list processes matching a case-insensitive partial-match string
 # Source: http://brettterpstra.com/fk-a-useful-bash-function/
-fp () { 
+fp () {
   ps Ao pid,comm|awk '{match($0,/[^\/]+$/); print substr($0,RSTART,RLENGTH)": "$1}'|grep -i $1|grep -v grep
 }
 
 # build menu to kill process
-fk () { 
+fk () {
   IFS=$'\n'
   PS3='Kill which process? '
   select OPT in $(fp $1) "Cancel"; do
