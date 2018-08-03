@@ -41,6 +41,7 @@ if ! zgen saved; then
   # Use completions
   zgen load rhysd/zsh-bundle-exec
   zgen load zsh-users/zsh-completions src
+  zgen load zsh-users/zsh-syntax-highlighting
 
   # save all to init script
   zgen save
