@@ -1,19 +1,9 @@
-gem 'bower-rails'
-gem 'cancancan', '~> 1.9'
 gem 'clearance'
 gem 'figaro'
 gem 'haml'
 gem 'role_model'
-gem 'sentry-raven', github: 'getsentry/raven-ruby'
-gem 'switch_user'
 
 gem_group :development do
-  gem 'capistrano'
-  gem 'capistrano-bundler', '~> 1.1', require: false
-  gem 'capistrano-nc',                require: false
-  gem 'capistrano-rails', '~> 1.1',   require: false
-  gem 'capistrano-rbenv', '~> 2.0',   require: false
-  gem 'capistrano3-foreman',          require: false
   gem 'meta_request'
   gem 'quiet_assets'
   gem 'rails-footnotes', '~> 4.0', github: 'josevalim/rails-footnotes'
@@ -22,7 +12,7 @@ gem_group :development do
 end
 
 gem_group :development, :test do
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'rspec-rails'
   gem 'spring-commands-rspec'
 end
@@ -32,7 +22,7 @@ gem_group :test do
 end
 
 gem_group :staging, :production do
-  gem 'unicorn'
+  gem 'puma'
 end
 
 
@@ -50,8 +40,8 @@ gsub_file 'config/application.rb',
 
 # Add error messages for locales
 inject_into_file 'config/application.rb', after: "default_locale = :de" do <<-CODE
-  
-  
+
+
     config.i18n.enforce_available_locales = true
     I18n.enforce_available_locales = true
   CODE
@@ -67,8 +57,8 @@ end
 
 # For development
 environment(nil, env: 'development') do
-  "config.action_mailer.default_url_options = { host: 'app.dev' }"
-  
+  "config.action_mailer.default_url_options = { host: 'app.localdev' }"
+
   "config.action_mailer.delivery_method = :smtp"
   "config.action_mailer.smtp_settings = { address: 'localhost', port: 1025 }"
 end
@@ -105,11 +95,6 @@ CODE
 # Create Procfile
 file 'Procfile', <<-CODE
 web:      rails s -p $PORT -b localhost
-CODE
-
-# Create .foreman
-file '.foreman', <<-CODE
-port: 7000
 CODE
 
 # Create .rspec
