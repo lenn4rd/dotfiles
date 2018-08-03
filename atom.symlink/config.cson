@@ -4,6 +4,19 @@
       "background-tips"
       "exception-reporting"
       "metrics"
+      "language-c"
+      "language-clojure"
+      "language-csharp"
+      "language-java"
+      "language-mustache"
+      "language-objective-c"
+      "language-perl"
+      "language-php"
+      "language-property-list"
+      "language-toml"
+      "language-xml"
+      "welcome"
+      "language-gfm"
     ]
     followSymlinks: false
     hideGitIgnoredFiles: true
@@ -17,11 +30,11 @@
     ]
     telemetryConsent: "no"
     themes: [
-      "unity-ui"
-      "glacier-syntax"
+      "one-light-ui"
+      "neon-drakula-syntax"
     ]
   editor:
-    fontFamily: "Menlo"
+    fontFamily: "Fira Code"
     fontSize: 15
     invisibles: {}
     showIndentGuide: true
