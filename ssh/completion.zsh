@@ -1,2 +1,2 @@
-hosts=$(awk '/^Host / {print $2}' ~/.ssh/config 2>/dev/null | tr ' ' "\n")
+local hosts=$(awk '/^Host / {print $2}' ~/.ssh/config.d/* | grep -v '*')
 zstyle ':completion:*:hosts' hosts $hosts
