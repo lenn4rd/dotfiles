@@ -34,7 +34,6 @@ if ! zgen saved; then
   for file in ${(M)config_files:#*/completion.zsh}; do
     file=${file#${DOTFILES}/}
 
-    echo Including $file
     zgen load $HOME/.dotfiles $file
   done
 
