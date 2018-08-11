@@ -7,5 +7,6 @@ echo "› sudo softwareupdate -i -a"
 sudo softwareupdate -i -a
 
 # First things first: the shell
-chsh -s /bin/zsh
-git clone https://github.com/tarjoilija/zgen.git ~/.zgen
+test $SHELL = '/bin/zsh' || chsh -s /bin/zsh
+
+test -d ~/.zgen || git clone https://github.com/tarjoilija/zgen.git ~/.zgen
