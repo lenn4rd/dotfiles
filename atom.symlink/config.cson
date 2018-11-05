@@ -1,5 +1,11 @@
 "*":
   core:
+    allowPendingPaneItems: false
+    closeDeletedFileTabs: true
+    customFileTypes:
+      "text.ignore": [
+        ".dockerignore"
+      ]
     disabledPackages: [
       "background-tips"
       "exception-reporting"
@@ -17,9 +23,9 @@
       "language-xml"
       "welcome"
       "language-gfm"
+      "circle-ci"
     ]
-    followSymlinks: false
-    hideGitIgnoredFiles: true
+    hideGitIgnoredFiles: false
     ignoredNames: [
       ".bundle"
       ".git"
@@ -33,16 +39,31 @@
       "one-light-ui"
       "neon-drakula-syntax"
     ]
+    titleBar: "custom"
   editor:
     fontFamily: "Fira Code"
     fontSize: 15
     invisibles: {}
     showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
     softWrapAtPreferredLineLength: true
+    softWrapHangingIndent: 2
   "go-plus":
     panelDisplayMode: "closed"
+  linter: {}
   "linter-eslint":
     useGlobalEslint: true
+  "linter-ui-default": {}
+  "markdown-preview":
+    useGitHubStyle: true
+  "markdown-preview-plus":
+    syntaxThemeName: "one-light-syntax"
+  "pg-formatter":
+    pgFormatterOptions:
+      functionCase: "lowercase"
+      keywordCase: "uppercase"
+      spaces: 2
   "release-notes":
     viewedVersion: "0.89.0"
   "spell-check":
@@ -52,5 +73,11 @@
       "text.git-commit"
       "text.html.basic"
     ]
+  "tree-view-git-status":
+    gitFlow:
+      enabled: false
   welcome:
     showOnStartup: false
+".json.source":
+  editor:
+    tabType: "soft"
