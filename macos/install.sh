@@ -20,3 +20,7 @@ mas install 1084713122 # Markoff
 mas install 445189367  # PopClip
 mas install 1031280567 # Postico
 mas install 1278508951 # Trello
+
+# Install Flynn CLI
+# Source: https://flynn.io/docs/cli
+L=/usr/local/bin/flynn && curl -sSL -A "`uname -sp`" https://dl.flynn.io/cli | zcat >$L && chmod +x $L

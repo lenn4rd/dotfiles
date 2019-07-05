@@ -427,9 +427,6 @@ defaults write com.apple.terminal SecureKeyboardEntry -bool true
 # Disable the annoying line marks
 defaults write com.apple.Terminal ShowLineMarks -int 0
 
-# Install the Flat theme for iTerm
-# open "$(pwd)/init/Flat.itermcolors"
-
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
@@ -520,6 +517,13 @@ defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool t
 
 # Disable signing emails by default
 defaults write ~/Library/Preferences/org.gpgtools.gpgmail SignNewEmailsByDefault -bool false
+
+###############################################################################
+# iTerm.app                                                                   #
+###############################################################################
+
+# Install the Flat theme for iTerm
+open macos/init/Flat.itermcolors
 
 ###############################################################################
 # Spectacle.app                                                               #
