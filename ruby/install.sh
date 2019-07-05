@@ -10,13 +10,15 @@ test -d rbenv-default-gems || git clone https://github.com/sstephenson/rbenv-def
 cat > $(rbenv root)/default-gems <<EOF
 awesome_print
 bundler
+bundler-audit
 byebug
 byebug-color-printer
 foreman
+license_finder
 qwandry
 EOF
 
-RUBY_VERSION=2.5.1
+RUBY_VERSION=2.6.1
 
 rbenv versions | grep -q $RUBY_VERSION || rbenv install $RUBY_VERSION
 rbenv global $RUBY_VERSION
