@@ -10,3 +10,13 @@ sudo softwareupdate -i -a
 test $SHELL = '/bin/zsh' || chsh -s /bin/zsh
 
 test -d ~/.zgen || git clone https://github.com/tarjoilija/zgen.git ~/.zgen
+
+# Install Mac App Store apps
+mas install 1063663640 # Better Rename 10
+mas install 435003921  # Fantastical
+mas install 865500966  # feedly
+mas install 482898991  # LiveReload
+mas install 1084713122 # Markoff
+mas install 445189367  # PopClip
+mas install 1031280567 # Postico
+mas install 1278508951 # Trello
