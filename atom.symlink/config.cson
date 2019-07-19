@@ -38,6 +38,7 @@
     followSymlinks: false
     hideGitIgnoredFiles: false
     ignoredNames: [
+      ".DS_Store"
       ".bundle"
       ".git"
       "log"
@@ -93,7 +94,7 @@
       "text.html.basic"
     ]
   "tree-view":
-    hideVcsIgnoredFiles: true
+    hideIgnoredNames: true
   "tree-view-git-status":
     gitFlow:
       enabled: false
