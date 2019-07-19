@@ -6,6 +6,7 @@ if ! zgen saved; then
   echo "Creating a zgen save"
 
   # Use plugins
+  zgen load iam4x/zsh-iterm-touchbar
   zgen load mafredri/zsh-async
   zgen load rupa/z
 
