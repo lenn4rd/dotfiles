@@ -23,7 +23,6 @@
       "welcome"
       "circle-ci"
       "language-typescript"
-      "language-gfm"
       "rspec-snippets"
       "test-gutter"
       "pg-formatter"
@@ -33,6 +32,10 @@
       "language-elixir"
       "busy-signal"
       "atom-elixir"
+      "autocomplete-atom-api"
+      "autosave"
+      "language-less"
+      "language-rust-bundled"
     ]
     excludeVcsIgnoredPaths: false
     followSymlinks: false
