@@ -1,0 +1,27 @@
+# Prepares iTerm 2 window for working with projects i.e. opens x additional tabs in the current directory
+
+# Source: https://superuser.com/a/605409
+# Documentation: https://www.iterm2.com/documentation-scripting.html
+prep() {
+  directory=$(pwd)
+  number_of_tabs=${1:-1}
+
+  for i in $(seq 1 $number_of_tabs); do
+    /usr/bin/osascript <<-EOF
+tell application "iTerm2"
+  tell current window
+    create tab with default profile
+  end tell
+
+  tell current tab of current window
+    set _new_session to last item of sessions
+  end tell
+
+  tell _new_session
+    select
+    write text "cd \"$directory\"; clear"
+  end tell
+end tell
+EOF
+  done
+}
