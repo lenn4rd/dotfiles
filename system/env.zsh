@@ -1,2 +1,2 @@
-export EDITOR='mate -w'
+export EDITOR=atom
 export ZSH=$HOME/.dotfiles
