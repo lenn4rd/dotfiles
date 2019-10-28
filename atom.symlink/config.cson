@@ -23,33 +23,31 @@
       "welcome"
       "circle-ci"
       "language-typescript"
-      "rspec-snippets"
       "test-gutter"
       "pg-formatter"
       "remote-atom"
       "linter-php"
       "language-vue"
-      "language-elixir"
       "busy-signal"
       "atom-elixir"
       "autocomplete-atom-api"
       "autosave"
       "language-less"
       "language-rust-bundled"
+      "rspec3-snippets"
     ]
     excludeVcsIgnoredPaths: false
     followSymlinks: false
     hideGitIgnoredFiles: false
     ignoredNames: [
       ".DS_Store"
-      ".bundle"
-      ".git"
       "log"
       "repositories"
       "tmp"
-      "vendor"
+      "vendor/bundle"
     ]
     openEmptyEditorOnStart: false
+    projectHome: "/Users/lenn4rd/hndw"
     restorePreviousWindowsOnStart: "no"
     telemetryConsent: "no"
     themes: [
@@ -89,6 +87,7 @@
   "remote-atom":
     keep_alive: true
     launch_at_startup: true
+  rspec: {}
   "spell-check":
     grammars: [
       "text.plain"
