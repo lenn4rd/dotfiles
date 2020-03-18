@@ -40,7 +40,6 @@ brew 'yarn'
 
 cask 'appzapper'
 cask 'atom'
-cask 'changes'
 cask 'coconutbattery'
 cask 'dash'
 cask 'docker'
