@@ -1,1 +1,0 @@
-alias fwdgen='cp $HOME/.dotfiles/forward/Forwardfile.example Forwardfile'
