@@ -24,8 +24,6 @@
       "circle-ci"
       "language-typescript"
       "test-gutter"
-      "pg-formatter"
-      "remote-atom"
       "linter-php"
       "language-vue"
       "busy-signal"
@@ -35,8 +33,13 @@
       "language-less"
       "language-rust-bundled"
       "rspec3-snippets"
+      "phoenix-elixir-snippets"
+      "language-elixir"
+      "package-generator"
+      "language-coffee-script"
+      "deprecation-cop"
+      "markdown-preview"
     ]
-    excludeVcsIgnoredPaths: false
     followSymlinks: false
     hideGitIgnoredFiles: false
     ignoredNames: [
@@ -57,8 +60,9 @@
     titleBar: "custom"
   editor:
     fontFamily: "Fira Code"
-    fontSize: 15
+    fontSize: 16
     invisibles: {}
+    preferredLineLength: 79
     showIndentGuide: true
     showInvisibles: true
     softWrap: true
@@ -74,6 +78,8 @@
   "linter-ui-default": {}
   "markdown-preview":
     breakOnSingleNewline: true
+    useGitHubStyle: true
+  "markdown-preview-plus":
     useGitHubStyle: true
   "markdown-writer":
     fileExtension: ".md"
@@ -97,6 +103,7 @@
     ]
   "tree-view":
     hideIgnoredNames: true
+    squashDirectoryNames: true
   "tree-view-git-status":
     gitFlow:
       enabled: false
@@ -109,4 +116,5 @@
     tabType: "soft"
 ".source.yaml":
   editor:
-    autoIndentOnPaste: true
+    autoIndent: true
+    autoIndentOnPaste: false
