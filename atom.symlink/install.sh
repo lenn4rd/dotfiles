@@ -1,1 +1,1 @@
-apm install neon-drakula-syntax
+atom-package-install
