@@ -2,7 +2,7 @@ atom-dbt@0.4.4
 atom-jinja2@0.6.0
 capybara-snippets@0.2.0
 craft-twig@0.4.0
-language-docker-l@0.2.3
+language-docker@1.1.8
 language-elixir@0.24.0
 language-hocon@1.2.3
 language-ini@1.23.0
