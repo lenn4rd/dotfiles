@@ -14,6 +14,7 @@ byebug
 byebug-color-printer
 foreman
 license_finder
+lunchy
 qwandry
 EOF
 
