@@ -17,7 +17,7 @@ license_finder
 qwandry
 EOF
 
-RUBY_VERSION=2.6.1
+RUBY_VERSION=2.6.5
 
 rbenv versions | grep -q $RUBY_VERSION || rbenv install $RUBY_VERSION
 rbenv global $RUBY_VERSION
