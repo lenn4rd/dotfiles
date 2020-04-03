@@ -70,6 +70,8 @@
   "fuzzy-finder":
     scoringSystem: "fast"
     useRipGrep: true
+  "git-diff":
+    showIconsInEditorGutter: true
   "go-plus":
     panelDisplayMode: "closed"
   linter: {}
@@ -101,6 +103,9 @@
       "text.git-commit"
       "text.html.basic"
     ]
+  "split-diff":
+    ignoreWhitespace: true
+    turnOffSoftWrap: true
   "tree-view":
     hideIgnoredNames: true
     squashDirectoryNames: true
