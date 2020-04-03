@@ -4,6 +4,7 @@ filename=$USER.tgz
 
 tar czf $filename \
   --exclude .bundle/cache/\* \
+  --exclude .gnupg/S.\* \
   --exclude .rbenv/\* \
   --exclude .Trash \
   --exclude \*.sock \
@@ -14,5 +15,4 @@ tar czf $filename \
   --exclude Music \
   --exclude Nextcloud \
   --exclude Pictures \
-  --exclude S.gpg-agent.\* \
   .
