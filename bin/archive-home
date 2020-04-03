@@ -1,0 +1,18 @@
+#!/bin/bash
+
+filename=$USER.tgz
+
+tar czf $filename \
+  --exclude .bundle/cache/\* \
+  --exclude .rbenv/\* \
+  --exclude .Trash \
+  --exclude \*.sock \
+  --exclude $filename \
+  --exclude Documents \
+  --exclude Library \
+  --exclude Movies \
+  --exclude Music \
+  --exclude Nextcloud \
+  --exclude Pictures \
+  --exclude S.gpg-agent.\* \
+  .
