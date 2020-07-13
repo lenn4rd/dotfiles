@@ -2,14 +2,17 @@ atom-dbt@0.4.4
 atom-jinja2@0.6.0
 atom-menu-patch-for-catalina@0.3.3
 capybara-snippets@0.2.0
+click-link@1.0.11
 craft-twig@0.4.0
+dash@1.7.1
+greppen-grok@0.3.0
 language-docker@1.1.8
 language-elixir@0.24.0
 language-hocon@1.2.3
 language-ini@1.23.0
 language-rspec@0.12.1
 language-slim@1.0.1
-language-terraform@0.8.1
+language-terraform@0.9.3
 language-twig@1.6.4
 make-executable@1.0.0
 markdown-preview-plus@3.11.5
@@ -23,4 +26,3 @@ rspec3-snippets@0.9.0
 sort-lines@0.19.0
 split-diff@1.6.1
 symbols-tree-view@0.14.0
-

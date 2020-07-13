@@ -39,6 +39,7 @@
       "language-coffee-script"
       "deprecation-cop"
       "markdown-preview"
+      "atom-menu-patch-for-catalina"
     ]
     followSymlinks: false
     hideGitIgnoredFiles: false
@@ -60,7 +61,7 @@
     titleBar: "custom"
   editor:
     fontFamily: "Fira Code"
-    fontSize: 16
+    fontSize: 15
     invisibles: {}
     preferredLineLength: 79
     showIndentGuide: true
@@ -78,10 +79,24 @@
   "linter-eslint":
     useGlobalEslint: true
   "linter-ui-default": {}
+  "make-executable": {}
   "markdown-preview":
     breakOnSingleNewline: true
     useGitHubStyle: true
   "markdown-preview-plus":
+    grammars: [
+      "source.gfm"
+      "source.gfm.jinja"
+      "source.litcoffee"
+      "text.html.basic"
+      "text.md"
+      "text.plain"
+      "text.plain.null-grammar"
+    ]
+    syncConfig:
+      syncEditorOnPreviewScroll: true
+      syncPreviewOnChange: true
+      syncPreviewOnEditorScroll: true
     useGitHubStyle: true
   "markdown-writer":
     fileExtension: ".md"
@@ -108,7 +123,6 @@
     turnOffSoftWrap: true
   "tree-view":
     hideIgnoredNames: true
-    squashDirectoryNames: true
   "tree-view-git-status":
     gitFlow:
       enabled: false
