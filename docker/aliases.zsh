@@ -1,6 +1,7 @@
 # Docker
 alias db='docker build --rm'
 alias di='docker images'
+alias dps='docker ps'
 alias drm='docker rm'
 alias drmi='docker rmi'
 alias drmid='docker rmi $(docker images -f dangling=true -q)'
