@@ -68,6 +68,7 @@
     showInvisibles: true
     softWrap: true
     softWrapHangingIndent: 2
+    tabType: "soft"
   "fuzzy-finder":
     scoringSystem: "fast"
     useRipGrep: true
@@ -121,6 +122,8 @@
   "split-diff":
     ignoreWhitespace: true
     turnOffSoftWrap: true
+  "terraform-fmt":
+    fmtOnSave: false
   "tree-view":
     hideIgnoredNames: true
   "tree-view-git-status":
