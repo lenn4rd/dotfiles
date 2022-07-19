@@ -37,10 +37,6 @@ fk () {
   unset IFS
 }
 
-function man () {
-  open dash://man:$1
-}
-
 # Create bzip2-compressed tar using pbzip2
 function pbtar() {
   tar cf "$1".tar.bz2 --use-compress-program=pbzip2 "$2"
