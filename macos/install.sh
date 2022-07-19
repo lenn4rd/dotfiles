@@ -23,3 +23,28 @@ mas install 1278508951 # Trello
 # Install Flynn CLI
 # Source: https://flynn.io/docs/cli
 L=/usr/local/bin/flynn && curl -sSL -A "`uname -sp`" https://dl.flynn.io/cli | zcat >$L && chmod +x $L
+
+# Install PopClip extenions
+echo "Installing PopClip extensions from https://pilotmoon.com/popclip/extensions/"
+for extension in "
+https://pilotmoon.com/popclip/extensions/ext/DuckDuckGo.popclipextz
+https://pilotmoon.com/popclip/extensions/ext/OpenInChrome.popclipextz
+
+https://pilotmoon.com/popclip/extensions/ext/Lowercase.popclipextz
+https://pilotmoon.com/popclip/extensions/ext/Uppercase.popclipextz
+https://pilotmoon.com/popclip/extensions/ext/Capitalize.popclipextz
+
+https://pilotmoon.com/popclip/extensions/ext/Say.popclipextz
+https://pilotmoon.com/popclip/extensions/ext/Convert.popclipextz
+https://pilotmoon.com/popclip/extensions/ext/CopyAsMarkdown.popclipextz
+
+https://pilotmoon.com/popclip/extensions/ext/Fantastical3.popclipextz
+https://pilotmoon.com/popclip/extensions/ext/Deliveries.popclipextz
+https://pilotmoon.com/popclip/extensions/ext/Dash.popclipextz
+https://pilotmoon.com/popclip/extensions/ext/UnixTime.popclipextz
+https://pilotmoon.com/popclip/extensions/ext/URLEncode.popclipextz
+https://pilotmoon.com/popclip/extensions/ext/Base64Encode.popclipextz
+"; do
+  curl -o ~/Downloads/ $extension
+  open basename($extension)
+done
