@@ -1,4 +1,4 @@
 # Don't unset this project default
 export ZSH=$HOME/.dotfiles
 
-export EDITOR="atom --wait"
+export EDITOR=nano
