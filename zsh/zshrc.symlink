@@ -57,4 +57,4 @@ if ! zgen saved; then
 fi
 
 # Set theme
-zgen load sindresorhus/pure
+zgen load sindresorhus/pure pure.zsh main
