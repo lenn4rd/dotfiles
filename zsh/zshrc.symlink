@@ -7,7 +7,6 @@ if ! zgen saved; then
 
   # Use plugins
   zgen load jonmosco/kube-ps1
-  zgen load mafredri/zsh-async
   zgen load mattberther/zsh-pyenv
   zgen load rupa/z
 
