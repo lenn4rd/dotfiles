@@ -56,4 +56,5 @@ if ! zgen saved; then
 fi
 
 # Set theme
-zgen load sindresorhus/pure pure.zsh main
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
+# zgen load sindresorhus/pure pure.zsh main
