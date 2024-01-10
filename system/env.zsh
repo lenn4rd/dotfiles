@@ -2,3 +2,4 @@
 export ZSH=$HOME/.dotfiles
 
 export EDITOR=nano
+export PATH="$HOME/.dotfiles/bin:$PATH"
