@@ -1,3 +1,0 @@
-'atom-workspace atom-text-editor:not([mini])':
-  'ctrl-shift-d': 'editor:duplicate-lines'
-  'cmd-shift-7': 'editor:toggle-line-comments'

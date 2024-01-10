@@ -12,7 +12,6 @@ bundler
 bundler-audit
 byebug
 byebug-color-printer
-foreman
 license_finder
 lunchy
 qwandry
