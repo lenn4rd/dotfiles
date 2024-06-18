@@ -2,27 +2,33 @@ module.exports = {
   defaultBrowser: "Safari",
   options: {
     // Hide the finicky icon from the top bar
-    hideIcon: true
+    hideIcon: false,
+
+    logRequests: true
   },
 
   handlers: [
     {
       match: [
-        "blaze.palantirfoundry.de/*",
-        "https://statics.teams.cdn.office.net/evergreen-assets/safelinks/1/atp-safelinks.html?url=https%3A%2F%2Fblaze.palantirfoundry.de*",
+        "https://blaze.palantirfoundry.de/*",
+        "https://eur01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fblaze.palantirfoundry.de*",
+        "https://statics.teams.cdn.office.net/evergreen-assets/safelinks/1/atp-safelinks.html?url=https%3A%2F%2Fblaze.palantirfoundry.de*"
       ],
       browser: "Firefox"
     },
     {
-      match: "meet.google.com/*",
+      match: "https://meet.google.com/*",
       browser: "Google Chrome"
-    }
-  ],
-
-  rewrite: [
+    },
     {
-      match: finicky.matchDomains(["google.com"]),
-      url: "https://duckduckgo.com"
+      match: "https://meet.goto.com/*",
+      browser: "Google Chrome"
+    },
+    {
+      match: finicky.matchHostnames(['teams.microsoft.com']),
+      browser: 'com.microsoft.teams',
+      url: ({url}) =>
+        ({...url, protocol: 'msteams'}),
     }
   ]
 }
