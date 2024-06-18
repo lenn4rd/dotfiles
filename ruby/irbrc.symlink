@@ -4,8 +4,8 @@ require 'irb'
 require 'irb/completion'
 require 'irb/ext/save-history'
 
-require 'awesome_print'
-AwesomePrint.irb!
+# require 'awesome_print'
+# AwesomePrint.irb!
 
 IRB.conf[:AUTO_INDENT] = true
 IRB.conf[:PROMPT_MODE] = :SIMPLE

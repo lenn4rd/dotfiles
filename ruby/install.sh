@@ -13,7 +13,6 @@ bundler-audit
 byebug
 byebug-color-printer
 license_finder
-lunchy
 qwandry
 EOF
 
