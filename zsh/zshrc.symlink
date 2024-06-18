@@ -1,59 +1,24 @@
-# load zgen
-source "${HOME}/.zgen/zgen.zsh"
+export DOTFILES=$HOME/.dotfiles
 
-# check if there's no init script
-if ! zgen saved; then
-  echo "Creating a zgen save"
+# Use Antidote for zsh plugin management
+source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+antidote load
 
-  # Use plugins
-  zgen load jonmosco/kube-ps1
-  zgen load mafredri/zsh-async async.zsh main
-  zgen load mattberther/zsh-pyenv
-  zgen load rupa/z
+# Load Pure prompt
+autoload -Uz promptinit && \
+promptinit && \
+prompt pure
 
-  # Use dotfiles
-  export DOTFILES=$HOME/.dotfiles
+PROMPT='$(kube_ps1)'$PROMPT
 
-  # all of our zsh files
-  typeset -U config_files
-  config_files=($DOTFILES/**/*.zsh)
+# Load topical configuration into shell
+for file in $DOTFILES/**/{aliases,env,load}.zsh; do
+  source $file
+done
 
-  # load the path files
-  for file in ${(M)config_files:#*/path.zsh}; do
-    file=${file#${DOTFILES}/}
+for file in $DOTFILES/**/completion.zsh; do
+  source $file
+done
 
-    zgen load $HOME/.dotfiles $file
-  done
-
-  # load everything but the path and completion files
-  for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}; do
-    file=${file#${DOTFILES}/}
-
-    zgen load $HOME/.dotfiles $file
-  done
-
-  # load every completion after autocomplete loads
-  for file in ${(M)config_files:#*/completion.zsh}; do
-    file=${file#${DOTFILES}/}
-
-    zgen load $HOME/.dotfiles $file
-  done
-
-  # Use completions
-  zgen load rhysd/zsh-bundle-exec
-  zgen load zsh-users/zsh-completions src
-  zgen load zsh-users/zsh-syntax-highlighting
-
-  # Stash your environment variables in ~/.localrc. This means they'll stay out
-  # of your main dotfiles repository (which may be public, like this one), but
-  # you'll have access to them in your scripts.
-  if [[ -a ~/.localrc ]]; then
-    zgen load ~/.localrc
-  fi
-
-  # save all to init script
-  zgen save
-fi
-
-# Set theme
-zgen load sindresorhus/pure pure.zsh main
+# TODO: Add zsh/config.zsh
+# TODO: Add zsh/fpath.zsh

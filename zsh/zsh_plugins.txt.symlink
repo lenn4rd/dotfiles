@@ -1,0 +1,13 @@
+# Plugins
+jonmosco/kube-ps1
+mafredri/zsh-async
+rupa/z
+
+# Completions
+# rhysd/zsh-bundle-exec
+zsh-users/zsh-completions
+belak/zsh-utils path:completion
+
+# Theme
+sindresorhus/pure kind:fpath
+zsh-users/zsh-syntax-highlighting
