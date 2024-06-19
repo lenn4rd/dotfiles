@@ -4,21 +4,29 @@ export DOTFILES=$HOME/.dotfiles
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 antidote load
 
+# Load topical configurations into shell
+for file in $DOTFILES/**/{aliases,env,load}.zsh; do
+  source $file
+done
+
+# Enable Homebrew completions
+fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+
+# Enable topical completions
+for file in $DOTFILES/**/completion.zsh; do
+  source $file
+done
+
+# Initialize completions
+autoload -Uz compinit && \
+compinit
+
 # Load Pure prompt
 autoload -Uz promptinit && \
 promptinit && \
 prompt pure
 
 PROMPT='$(kube_ps1)'$PROMPT
-
-# Load topical configuration into shell
-for file in $DOTFILES/**/{aliases,env,load}.zsh; do
-  source $file
-done
-
-for file in $DOTFILES/**/completion.zsh; do
-  source $file
-done
 
 # TODO: Add zsh/config.zsh
 # TODO: Add zsh/fpath.zsh
