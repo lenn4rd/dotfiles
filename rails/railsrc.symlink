@@ -1,6 +1,0 @@
---template=~/.dotfiles/rails/rails.template
---database=postgresql
---no-helper
---no-helper-specs
---skip-assets
---skip-test-unit
