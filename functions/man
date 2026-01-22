@@ -1,4 +1,0 @@
-# Open man page in Dash
-man () {
-  open dash://{man:$1}
-}
