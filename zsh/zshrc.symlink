@@ -1,7 +1,11 @@
 export DOTFILES=$HOME/.dotfiles
 
+# Set up Homebrew first so we can access brew
+source $DOTFILES/homebrew/env.zsh
+
 # Use Antidote for zsh plugin management
-source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+# See https://antidote.sh/install
+source $(brew --prefix)/share/antidote/antidote.zsh
 antidote load
 
 # Load topical configurations into shell
@@ -17,9 +21,15 @@ for file in $DOTFILES/**/completion.zsh; do
   source $file
 done
 
-# Initialize completions
+# Initialize completions and enable caching
 autoload -Uz compinit && \
 compinit
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh/cache
+
+# Load functions
+fpath+=($HOME/.dotfiles/functions $fpath)
+autoload -U $HOME/.dotfiles/functions/*(:t)
 
 # Load Pure prompt
 autoload -Uz promptinit && \

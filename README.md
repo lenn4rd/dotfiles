@@ -14,7 +14,7 @@ subject](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
 
 ## forked
 
-This is a fork of Zach Holman's dotfiles. I added a couple of topics, e.g. SSH and TextMate, removed options I don't need and, most importantly, I added [zgen](https://github.com/tarjoilija/zgen) to manage my `zsh`.
+This is a fork of Zach Holman's dotfiles. I added a couple of topics, e.g. for Ruby and Kubernetes, removed options I don't need, and added [Antidote](https://antidote.sh) as Zsh plugin manager.
 
 ## topical
 
